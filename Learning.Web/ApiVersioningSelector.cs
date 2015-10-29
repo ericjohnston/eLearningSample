@@ -64,6 +64,11 @@ namespace Learning.Web
                 // the following suffix (example: PeopleV1)
                 string newControllerNameSuffix = String.Concat("V", apiVersion);
 
+                //IEnumerable<HttpControllerDescriptor> descriptors = attributeSubRoutes
+                //    .Select(attrRoute => GetControllerDescriptor(attrRoute)).ToList<HttpControllerDescriptor>();
+
+                //IEnumerable<IHttpRouteData> filteredSubRoutes = attributeSubRoutes;
+
                 IEnumerable<IHttpRouteData> filteredSubRoutes = attributeSubRoutes
                     .Where(attrRouteData =>
                     {

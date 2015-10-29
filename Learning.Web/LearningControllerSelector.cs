@@ -30,7 +30,7 @@ namespace Learning.Web
             return default(T);
         }
 
-        private static string GetControllerName(HttpRequestMessage request)
+        public override string GetControllerName(HttpRequestMessage request)
         {
             var attributedRoutesData = request.GetRouteData().GetSubRoutes();
             var subRouteData = attributedRoutesData.FirstOrDefault();

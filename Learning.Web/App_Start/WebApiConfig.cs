@@ -26,7 +26,7 @@ namespace Learning.Web
             var jsonFormatter = config.Formatters.OfType<JsonMediaTypeFormatter>().First();
             jsonFormatter.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
 
-            config.Services.Replace(typeof(IHttpControllerSelector), new ApiVersioningSelector((config)));
+            //config.Services.Replace(typeof(IHttpControllerSelector), new ApiVersioningSelector((config)));
         }
     }
 }

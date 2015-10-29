@@ -88,7 +88,7 @@ namespace Learning.Web.Models
         {
             return new StudentV2BaseModel()
             {
-                Url = _UrlHelper.Link("Students", new { userName = student.UserName }),
+                Url = _UrlHelper.Link("Students2", new { userName = student.UserName }),
                 Id = student.Id,
                 FullName = string.Format("{0} {1}", student.FirstName, student.LastName),
                 Gender = student.Gender,
