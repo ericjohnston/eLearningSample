@@ -12,7 +12,7 @@ using System.Web.Http.Routing;
 
 namespace Learning.Web.Controllers
 {
-    [RoutePrefix("api/students")]
+    [RoutePrefix("api/v2/students")]
     public class StudentsV2Controller : BaseApiController
     {
         public StudentsV2Controller(ILearningRepository repo)
@@ -20,7 +20,7 @@ namespace Learning.Web.Controllers
         {
         }
 
-        [Route(Name = "Students2")]
+        [VersionedRoute("~/api/students", 2, "Students2")]
         public IEnumerable<StudentV2BaseModel> Get(int page = 0, int pageSize = 10)
         {
             IQueryable<Student> query;
@@ -53,8 +53,7 @@ namespace Learning.Web.Controllers
 
             return results;
         }
-
-        //ToDo: Apply Security Here
+        
         [LearningAuthorize]
         [Route("{userName}")]
         public HttpResponseMessage Get(string userName)

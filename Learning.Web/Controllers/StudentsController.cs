@@ -20,7 +20,7 @@ namespace Learning.Web.Controllers
         {
         }
         
-        [Route(Name = "Students")]
+        [VersionedRoute("~/api/students", 1, "Students")]
         public IEnumerable<StudentBaseModel> Get(int page = 0, int pageSize = 10)
         {
             IQueryable<Student> query;
