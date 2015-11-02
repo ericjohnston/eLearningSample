@@ -186,7 +186,6 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
-    <Compile Include="Controllers\BaseApiController.cs" />
     <Compile Include="Controllers\CoursesController.cs" />
     <Compile Include="Controllers\EnrollmentController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -198,14 +197,8 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="LearningControllerSelector.cs" />
-    <Compile Include="Models\CourseModel.cs" />
-    <Compile Include="Models\EnrollmentModel.cs" />
-    <Compile Include="Models\ModelFactory.cs" />
-    <Compile Include="Models\StudentBaseModel.cs" />
-    <Compile Include="Models\StudentModel.cs" />
+    <Compile Include="Models\ModelExtensions.cs" />
     <Compile Include="Models\StudentV2BaseModel.cs" />
-    <Compile Include="Models\SubjectModel.cs" />
-    <Compile Include="Models\TutorModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="VersionConstraint.cs" />
     <Compile Include="VersionedRoute.cs" />
@@ -261,6 +254,10 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Learning.ApiBase\Learning.ApiBase.csproj">
+      <Project>{8be190ee-419b-4a9d-bb73-d0070f3ec7e3}</Project>
+      <Name>Learning.ApiBase</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Learning.Data\Learning.Data.csproj">
       <Project>{a2cc5f85-99ac-4252-8529-ab75cabaab81}</Project>
       <Name>Learning.Data</Name>

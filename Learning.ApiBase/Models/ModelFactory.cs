@@ -4,16 +4,19 @@ using System;
 using System.Linq;
 using System.Net.Http;
 
-namespace Learning.Web.Models
+namespace Learning.ApiBase.Models
 {
     public class ModelFactory
     {
         private System.Web.Http.Routing.UrlHelper _UrlHelper;
         private ILearningRepository _repo;
 
+        public System.Web.Http.Routing.UrlHelper ModelFactoryUrlHelper { get; private set; }
+
         public ModelFactory(HttpRequestMessage request, ILearningRepository repo)
         {
             _UrlHelper = new System.Web.Http.Routing.UrlHelper(request);
+            ModelFactoryUrlHelper = _UrlHelper;
             _repo = repo;
         }
 
@@ -81,19 +84,6 @@ namespace Learning.Web.Models
                 LastName = student.LastName,
                 Gender = student.Gender,
                 EnrollmentsCount = student.Enrollments.Count(),
-            };
-        }
-
-        public StudentV2BaseModel CreateV2Summary(Student student)
-        {
-            return new StudentV2BaseModel()
-            {
-                Url = _UrlHelper.Link("Students2", new { userName = student.UserName }),
-                Id = student.Id,
-                FullName = string.Format("{0} {1}", student.FirstName, student.LastName),
-                Gender = student.Gender,
-                EnrollmentsCount = student.Enrollments.Count(),
-                CourseDuration = Math.Round(student.Enrollments.Sum(c => c.Course.Duration))
             };
         }
 

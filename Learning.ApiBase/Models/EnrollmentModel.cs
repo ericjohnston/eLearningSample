@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Learning.Web.Models
+namespace Learning.ApiBase.Models
 {
     public class EnrollmentModel
     {

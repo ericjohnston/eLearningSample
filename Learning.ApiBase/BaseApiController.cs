@@ -1,13 +1,8 @@
 ﻿using Learning.Data;
-using Learning.Web.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
+using Learning.ApiBase.Models;
 using System.Web.Http;
 
-namespace Learning.Web.Controllers
+namespace Learning.ApiBase
 {
     public class BaseApiController : ApiController
     {

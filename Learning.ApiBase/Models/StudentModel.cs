@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Learning.Web.Models
+namespace Learning.ApiBase.Models
 {
     public class StudentModel : StudentBaseModel
     {

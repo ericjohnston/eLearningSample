@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace Learning.Web.Models
+namespace Learning.ApiBase.Models
 {
     public class StudentV2BaseModel
     {
