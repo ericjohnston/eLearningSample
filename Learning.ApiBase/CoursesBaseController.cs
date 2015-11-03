@@ -22,7 +22,7 @@ namespace Learning.ApiBase
         }
 
         [Route(Name = "Courses")]
-        public Object Get(int page = 0, int pageSize = 10)
+        public virtual Object Get(int page = 0, int pageSize = 10)
         {
             IQueryable<Course> query;
 

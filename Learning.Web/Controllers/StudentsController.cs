@@ -24,7 +24,7 @@ namespace Learning.Web.Controllers
         
         [LearningAuthorize]
         [Route("{userName}")]
-        public HttpResponseMessage Get(string userName)
+        public override HttpResponseMessage Get(string userName)
         {
             return base.Get(userName);
         }
