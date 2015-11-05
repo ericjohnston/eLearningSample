@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Learning.Web", "Learning.We
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Learning.ApiBase", "Learning.ApiBase\Learning.ApiBase.csproj", "{8BE190EE-419B-4A9D-BB73-D0070F3EC7E3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Learning.Auth", "Learning.Auth\Learning.Auth.csproj", "{75C6E5AE-D1CA-4403-8B3E-AC786E89B10D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{8BE190EE-419B-4A9D-BB73-D0070F3EC7E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8BE190EE-419B-4A9D-BB73-D0070F3EC7E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8BE190EE-419B-4A9D-BB73-D0070F3EC7E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75C6E5AE-D1CA-4403-8B3E-AC786E89B10D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75C6E5AE-D1CA-4403-8B3E-AC786E89B10D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75C6E5AE-D1CA-4403-8B3E-AC786E89B10D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75C6E5AE-D1CA-4403-8B3E-AC786E89B10D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
