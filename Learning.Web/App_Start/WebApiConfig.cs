@@ -4,7 +4,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http.Formatting;
 using System.Web.Http;
+using System.Web.Http.Controllers;
 using System.Web.Http.Dispatcher;
+using System.Web.Http.Routing;
 
 namespace Learning.Web
 {
@@ -27,6 +29,17 @@ namespace Learning.Web
             jsonFormatter.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
 
             //config.Services.Replace(typeof(IHttpControllerSelector), new ApiVersioningSelector((config)));
+        }
+
+        public class CustomDirectRouteProvider : DefaultDirectRouteProvider
+        {
+            protected override IReadOnlyList<IDirectRouteFactory>
+            GetActionRouteFactories(HttpActionDescriptor actionDescriptor)
+            {
+                // inherit route attributes decorated on base class controller's actions
+                return actionDescriptor.GetCustomAttributes<IDirectRouteFactory>
+                (inherit: true);
+            }
         }
     }
 }

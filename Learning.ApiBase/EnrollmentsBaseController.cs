@@ -40,7 +40,7 @@ namespace Learning.ApiBase
 
         //[LearningAuthorize]
         [Route("~/api/courses/{courseId}/students/{userName}")]
-        public HttpResponseMessage Post(int courseId, [FromUri]string userName, [FromBody]Enrollment enrollment)
+        public virtual HttpResponseMessage Post(int courseId, [FromUri]string userName, [FromBody]Enrollment enrollment)
         {
             try
             {
